@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Leave Management System</title>
+    <style>
+      /* General reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Fullscreen background image setup */
+      .background {
+        position: relative;
+        height: 100vh;
+        background: url("./Emp.jpeg") no-repeat center center/cover;
+        animation: zoomInOut 10s infinite alternate;
+      }
+
+      /* Zoom In/Out animation */
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Title style */
+      .title {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+
+      /* Quote on the right side */
+      .quote {
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        font-size: 1.5rem;
+        color: white;
+        font-style: italic;
+        max-width: 30%;
+        line-height: 1.5;
+        text-shadow: 2px 2px 5px brown;
+      }
+
+      /* Get Started button */
+      .get-started {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 30px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: #ff5722; /* Highlighted color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+      }
+
+      /* Hover effect for button */
+      .get-started:hover {
+        background-color: #e64a19; /* Darker shade when hovered */
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2rem;
+          padding: 25%;
+        }
+
+        .quote {
+          font-size: 1rem;
+          max-width: 50%;
+        }
+
+        .get-started {
+          font-size: 1rem;
+          padding: 12px 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background and content container -->
+    <div class="background">
+      <!-- Title -->
+      <div
+        class="title"
+        style="
+          color: brown;
+          text-align: center;
+          border-style: solid;
+          border-width: 5px;
+        "
+      >
+        Employee Leave Management System
+      </div>
+
+      <!-- Quote -->
+      <div class="quote">
+        "Taking a purposeful holiday isn’t a break from work, but a chance to
+        recharge, refresh your creativity, and return stronger. It’s an
+        investment in your well-being, helping you come back with renewed focus
+        and a fresh perspective."
+      </div>
+
+      <!-- Get Started button -->
+      <a href="second.html" style="text-decoration: none">
+        <button
+          class="get-started"
+          style="color: brown; background-color: whitesmoke"
+        >
+          GETSTART
+        </button>
+      </a>
+    </div>
+  </body>
+</html>

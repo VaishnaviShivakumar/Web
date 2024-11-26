@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System - Leave Request</title>
+    <style>
+      body {
+        background-image: url("./istockphoto-1328891609-612x612.jpg");
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: black;
+        border-radius: 8px;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        color: brown;
+      }
+      label {
+        font-size: 1.2em;
+        margin: 10px 0;
+        display: block;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 1em;
+        border-radius: 4px;
+        border: none;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      textarea {
+        background-color: rgb(224, 220, 222);
+        color: brown;
+      }
+      input[type="file"] {
+        background-color: rgb(25, 14, 14);
+      }
+      button {
+        background-color: brown;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #8b4513;
+      }
+      .form-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+      .back-button {
+        background-color: #8b4513;
+        width: auto;
+        margin-right: 10px;
+      }
+      .submit-button {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Leave Request Form</h1>
+
+      <form
+        id="leaveForm"
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date" required />
+
+        <label for="end_date">End Date</label>
+        <input type="date" id="end_date" name="end_date" required />
+
+        <label for="reason">Reason for Leave</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <label for="support_documents">Support Documents (if any)</label>
+        <input type="file" id="support_documents" name="support_documents" />
+
+        <div class="form-buttons">
+          <a href="index.html">
+            <button type="button" class="back-button">Back</button>
+          </a>
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Event listener for form submission
+      document
+        .getElementById("leaveForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the form from submitting to the server
+
+          // Ideally, here you would send data to the server via AJAX or fetch, but for now, let's simulate a submission.
+          alert("Leave request submitted successfully!");
+
+          // After submission, clear the form fields (to simulate the user not needing to fill it again)
+          document.getElementById("leaveForm").reset();
+        });
+    </script>
+  </body>
+</html>

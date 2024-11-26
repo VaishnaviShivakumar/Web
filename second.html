@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Leave Management System</title>
+    <style>
+      /* General reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Fullscreen background image setup */
+      .background {
+        position: relative;
+        height: 100vh;
+        background: url("./choose.jpg") no-repeat center center/cover;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Outer container for the entire content */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        max-width: 1200px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Role selection container - Align vertically */
+      .role-container {
+        display: flex;
+        flex-direction: column; /* Stack the boxes vertically */
+        gap: 30px;
+        width: 40%; /* Reduced width so the thought text can sit next to it */
+      }
+
+      /* Right side - Thought text */
+      .thought {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        width: 35%;
+        text-align: center;
+        padding: 20px;
+        border-left: 2px solid #ddd;
+      }
+
+      .thought p {
+        margin-top: 20px;
+        color: #555;
+        font-style: italic;
+      }
+
+      /* Role box style */
+      .role-box {
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        width: 100%; /* Full width of the parent container */
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .role-box h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #333;
+      }
+
+      .role-box button {
+        padding: 12px 25px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .role-box button:hover {
+        background-color: #45a049;
+      }
+
+      /* Adding color variations */
+      .employee {
+        background-color: #e3f2fd;
+      }
+
+      .admin {
+        background-color: #fff3e0;
+      }
+
+      .hr-manager {
+        background-color: #f1f8e9;
+      }
+
+      /* Hover effect for role boxes */
+      .role-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .role-container {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .thought {
+          width: 100%;
+          border-left: none;
+          margin-top: 20px;
+        }
+
+        .role-box {
+          width: 80%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Outer container for everything -->
+    <div class="background">
+      <div class="container">
+        <!-- Role selection container -->
+        <div class="role-container">
+          <!-- Employee role box -->
+          <div class="role-box employee">
+            <h2>Employee</h2>
+            <a href="third.html"> <button>Choose</button></a>
+          </div>
+
+          <!-- Admin role box -->
+          <div class="role-box admin">
+            <h2>Admin</h2>
+            <a href="third.html"> <button>Choose</button></a>
+          </div>
+
+          <!-- HR/Manager role box -->
+          <div class="role-box hr-manager">
+            <h2>HR/Manager</h2>
+            <a href="third.html"> <button>Choose</button></a>
+          </div>
+        </div>
+
+        <!-- Thought text on the right side -->
+        <div class="thought">
+          <p>Choose your desired role to begin managing your leave requests.</p>
+          <p>Every role plays a vital part in our system!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
